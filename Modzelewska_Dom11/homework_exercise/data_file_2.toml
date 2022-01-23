@@ -1,0 +1,10 @@
+title = "Sample file"
+
+["Section 1"]
+data_point = 7
+data_time = "en"
+
+
+["Section 2"]
+data_point = 11
+data_time = "de"
