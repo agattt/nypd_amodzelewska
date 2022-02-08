@@ -53,7 +53,7 @@ def check_code_changes(data_frame_1, data_frame_2, jst_type):
 
         df = df.iloc[rows]
 
-        df.to_excel("changed_codes.xlsx", sheet_name=jst_type)
+        df.to_excel("results/changed_codes_" + jst_type + ".xlsx")
 
         data_frame_1.drop(
             data_frame_1.index[data_frame_1["Kod Jednostki Terytorialnej"].isin(df["Kod Jednostki Terytorialnej"])],
@@ -65,7 +65,7 @@ def check_code_changes(data_frame_1, data_frame_2, jst_type):
             inplace=True
         )
 
-        print("Wykryto zmiany kodów JST. Szczegóły zobacz w pliku \"changed_codes.xlsx\"")
+        print("Wykryto zmiany kodów JST. Szczegóły zobacz w pliku \"changed_codes" + jst_type + ".xlsx\"")
 
 
 def sum_rows(data_frame, year):
